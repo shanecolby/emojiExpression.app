@@ -38,7 +38,7 @@ popBtn.addEventListener("click", function () {
   renderEmojis()
 })
 
-pushBtn.addEventListener("click", function () {
+shiftBtn.addEventListener("click", function () {
   myEmojis.shift()
   renderEmojis()
 })

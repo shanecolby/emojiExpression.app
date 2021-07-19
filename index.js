@@ -18,25 +18,27 @@ function renderEmojis() {
 renderEmojis()
 
 pushBtn.addEventListener("click", function () {
-  myEmojis.push(emojiInput.value)
-  emojiInput.value = ""
+  if (emojiInput.value) {
+    myEmojis.push(emojiInput.value)
+    emojiInput.value = ""
+    renderEmojis()
+  }
+})
+
+unshiftBtn.addEventListener("click", function () {
+  if (emojiInput.value) {
+    myEmojis.unshift(emojiInput.value)
+    emojiInput.value = ""
+    renderEmojis()
+  }
+})
+
+popBtn.addEventListener("click", function () {
+  myEmojis.pop()
   renderEmojis()
 })
 
 pushBtn.addEventListener("click", function () {
-  myEmojis.push(emojiInput.value)
-  emojiInput.value = ""
-  renderEmojis()
-})
-
-pushBtn.addEventListener("click", function () {
-  myEmojis.push(emojiInput.value)
-  emojiInput.value = ""
-  renderEmojis()
-})
-
-pushBtn.addEventListener("click", function () {
-  myEmojis.push(emojiInput.value)
-  emojiInput.value = ""
+  myEmojis.shift()
   renderEmojis()
 })

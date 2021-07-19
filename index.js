@@ -1,5 +1,11 @@
 const myEmojis = ["👨‍💻", "⛷", "🍲"]
 const emojiContainer = document.getElementById("emoji-container")
+const emojiInput = document.getElementById("emoji-input")
+const pushBtn = document.getElementById("push-btn")
+const unshiftBtn = document.getElementById("unshift-btn")
+const popBtn = document.getElementById("pop-btn")
+const shiftBtn = document.getElementById("shift-btn")
+
 
 function renderEmojis() {
   emojiContainer.innerHTML = ""
@@ -8,7 +14,29 @@ function renderEmojis() {
     emoji.textContent = myEmojis[i]
     emojiContainer.append(emoji)
   }
-
 }
-
 renderEmojis()
+
+pushBtn.addEventListener("click", function () {
+  myEmojis.push(emojiInput.value)
+  emojiInput.value = ""
+  renderEmojis()
+})
+
+pushBtn.addEventListener("click", function () {
+  myEmojis.push(emojiInput.value)
+  emojiInput.value = ""
+  renderEmojis()
+})
+
+pushBtn.addEventListener("click", function () {
+  myEmojis.push(emojiInput.value)
+  emojiInput.value = ""
+  renderEmojis()
+})
+
+pushBtn.addEventListener("click", function () {
+  myEmojis.push(emojiInput.value)
+  emojiInput.value = ""
+  renderEmojis()
+})
